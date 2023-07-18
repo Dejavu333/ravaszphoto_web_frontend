@@ -1,0 +1,163 @@
+/*VARIABLE*/
+:root {
+  --cLight: wheat;
+  --cDark: #2c2c2c;
+  --myFont: Century Gothic;
+}
+
+
+/*SCREEN READER*/
+.hidden {
+  padding: 8px;
+  position: absolute;
+  left: 0%;
+  height: 30px;
+  transform: translateY(-120%);
+  transition: transform 0.3s;
+}
+
+.hidden:focus {
+  transform: translateY(0%);
+}
+
+.hidden {
+  color: var(--cDark);
+  text-decoration: none;
+}
+
+
+/*LAYOUT*/
+* {
+  user-select: none;
+  font-family: var(--myFont);
+  padding: 0;
+  letter-spacing: 5px;
+}
+
+body {
+  height: 100%;
+  min-width: 360px;
+  margin: 0;
+  background: var(--cLight);
+}
+
+h1 {
+  text-align: center;
+  color: var(--cDark);
+  font-size: 2.4rem;
+  margin: 1rem;
+}
+
+.container {
+  max-width: 730px;
+  overflow: hidden;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: -4rem;
+  background: var(--cLight);
+  box-shadow: 10px 0 10px -5px var(--cDark), -10px 0 10px -5px var(--cDark);
+}
+
+
+/*NAVIGATION*/
+li {
+  list-style: none;
+}
+
+#navList {
+  height: 250px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.navParagraph {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-top: 0;
+  cursor: pointer;
+  width: 100%;
+  background: var(--cDark);
+  color: var(--cLight);
+  font-weight: bold;
+}
+
+.navListElement {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0;
+  width: 200px;
+  height: 40px;
+  margin-top: 1.2rem;
+  transition-duration: 0.2s;
+  padding: 0;
+}
+
+@media (min-width: 500px) {
+  .navParagraph:hover {
+    background: wheat;
+    color: var(--cDark);
+    font-weight: none;
+  }
+}
+
+.navListElement:nth-child(odd) {
+  transform: perspective(300px) rotateY(45deg);
+  box-shadow: -2px 2px 7px var(--cDark);
+}
+
+.navListElement:nth-child(even) {
+  transform: perspective(300px) rotateY(-45deg);
+  box-shadow: 2px 2px 7px var(--cDark);
+}
+
+@media (min-width: 500px) {
+  .navListElement:hover {
+    transform: rotateY(0);
+    background: wheat;
+    color: var(--cDark);
+    box-shadow: 0px 0px 0px;
+  }
+
+}
+
+.navParagraph a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*LOGO*/
+#logo {
+  display: block;
+  margin: auto;
+  width: 10rem;
+
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: -1;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+
+/*BUTTON*/
+.buttonDiv {
+  margin-bottom: 2rem;
+}

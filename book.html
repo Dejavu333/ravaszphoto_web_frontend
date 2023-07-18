@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <title>Foglalás3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="book.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <a class="hidden" href="#contentStart">Skip to content</a>
+
+  <header>
+
+    <img id="logo" src="images/ravasz-LOGO.png" alt="ravasz logo: egy stilizált róka" onclick="location.href = 'https://www.instagram.com/vasvarypix/';">
+    <nav >         
+      <ul id="navList">
+        <li class="navListElement"><p class="navParagraph"><a  href="index.html">Galéria</a></p></li>
+        <li class="navListElement"><p class="navParagraph"><a  href="book.html">Foglal</a></p></li>
+        <li class="navListElement"><p class="navParagraph"><a  href="about.html">Rólunk</a></p></li>
+      </ul>
+    </nav>
+   
+  </header>
+
+  <main class="container">
+    <form action="https://formsubmit.co/ravaszagency@gmail.com" method="POST">
+
+      <h1 id="contentStart">OPCIÓK</h1>
+        
+      <ul id="typeList">
+        <li title="eseményfotózás a készülődéstől a menyecsketáncig"><a>Csak Esküvő</a></li>
+        <li title="kreatív jegyesfotózás 2 szakemberrel"><a>Csak Jegyesfotózás</a></li>
+        <li title="kreatív jegyesfotózás 2 szakemberrel + eseményfotózás a készülődéstől a menyecsketáncig"><a class="underLined">Mindkettő</a></li>
+      </ul> 
+
+      <section id="optionSection">
+      <!--JS generated code-->
+      </section>
+      </br>
+      <input type="hidden" name="_captcha" value="true">
+      <input class="inputContainer textInputContainer" type="text" name="név" placeholder="Név" maxlength="20" required>
+      <input class="inputContainer textInputContainer" type="text" name="telefon" placeholder="Telefonszám" minlength="10" maxlength="11" required>
+
+      <p id="total" class="priceInfo"></p>
+      
+      <div hidden class="navListElement">botyWare</div>
+      <button type="submit" class="navListElement buttonDiv">
+        <p class="navParagraph">
+          <a id="submitBtn">Küldés</a>
+        </p>
+      </button>
+
+    </form>
+  </main>
+
+<script src="./data.js"></script>
+<script src="./book.js"></script>
+
+</body>
+
+</html>
